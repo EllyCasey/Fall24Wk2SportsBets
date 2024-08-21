@@ -53,20 +53,26 @@ function drawTeam2() {
 function betTeam1() {
     let team1Arr = players.filter((player) => player.teamNumber == 1)
     console.log('team 1: ', team1Arr)
-
+    let totalSkill = 0
+    for (let i = 0; i < team1Arr.length; i++) {
+        let team1 = team1Arr[i]
+        totalSkill += team1.skill
+    }
+    console.log('team 1 total skill', totalSkill)
 }
 
 function betTeam2() {
-    let team2Arr = players.filter((player) => player.teamNumber == 1)
+    let team2Arr = players.filter((player) => player.teamNumber == 2)
     console.log('team 2: ', team2Arr)
     let totalSkill = 0
     for (let i = 0; i < team2Arr.length; i++) {
         let team2 = team2Arr[i]
-        totalSkill += team2.skill + totalSkill
-        console.log('team 2 total skill', totalSkill);
-
-        return totalSkill
+        totalSkill += team2.skill
     }
+    console.log('team 2 total skill', totalSkill);
+}
+
+function pickWinner() {
 
 }
 
